@@ -6,16 +6,18 @@ Live : https://huggingface.co/spaces/VictorVS/biais_demo
 
 ## Scénario
 
-Une entreprise veut fluidifier son processus de recrutement et lance un projet d'IA qui trie des CVs. Cette IA est entraînée avec l'historique d'entretiens de recrutement ménés dans la entreprise et les données utilisées. Chaque entretien est représenté comme une ligne d'un tableau qui précise des informations des candidats ansi que l'issue de l'entretien. 
+Une entreprise veut fluidifier son processus de recrutement et lance un projet d'IA qui trie des CVs. Pour cela, l'IA est entraînée avec les données issues des entretiens de recrutement précedents. L'idée subyacente est que l'IA sera capable de découvrir les critères de sélection partagés par les CV des personnes récrutées. Concrètement, chaque entretien est représenté comme une ligne d'un tableau qui comporte des informations des candidats ansi que l'issue de l'entretien. 
 
-Imaginons qu'un recrutement est lancé pour embaucher un profil "confirmé".
+Imaginons qu'un recrutement est lancé pour embaucher un profil "confirmé" et que les données d'entraînement présentent un biais évident : aucune femme n'a été retenue et tous les hommes ont été recrutés sans tenir compte de leur profil (junior, confirmé ou sénior). L'IA saura-t-elle préconiser les profils confirmés ? 
 
-## L'application
+Pour le savoir il suffit de cliquer sur le bouton "soumettre" qui lance ces actions :
 
-Aux fins de l'exercice, les données proposées initialement présentent un biais évident : aucune femme n'a été retenue et tous les hommes ont été recrutés.  
+1. Entraînement d'un modèle à partir de données fournies ;
+2. Utilisation du modèle pour réaliser des prédictions sur des données de test ;
+3. Calcul et affichage de l'importance accordée par le modèle à chaque colonne des données ;
 
-En cliquant sur le bouton "soumettre", l'application va entraîner un premier modèle à partir des données biaisées, puis elle l'applique à la liste de CVs en attente et propose des prédictions sur le recrutement ou pas de la personne. Une deuxième tableau présente l'importance des diffférentes caractéristiques en fonction des recrutements historiques.
+Les réultats sont ceux que vous attendiez ? 
 
-Essayez à changer le tableau de données pour que l'application apprenne à détecter les profils "confirmés".
+Sauriez-vous modifier les données d'entraînement pour éviter le biais et qu'il réussise à identifier les profils "confirmés" ? Essayez à le faire et cliquez à nouveau sur "Soumettre".  
 
  
