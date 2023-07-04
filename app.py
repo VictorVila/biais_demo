@@ -60,6 +60,12 @@ def get_features_importance(model, classifier):
     df_concat = pd.concat([df1, df2], axis=1)
     return df_concat 
 
+def format_parameters (x) :
+    """Formats parameters for showing in feature importance dataframe"""
+    x = str(x).lstrip('categorical__')
+    x = x.replace('_', ' : ')
+    return x
+
 def get_output(data_raw): 
     """Applies the model to the test data and gets predictions.
     Returns the test data along qith the predictions and the importance of each feature"""      
@@ -70,8 +76,8 @@ def get_output(data_raw):
     predictions = model.predict(data_test) 
     result = pd.concat([data_test, pd.DataFrame(data = predictions, columns={'Predictions'})], axis = 1)
     features_importance = get_features_importance(model, decission_tree)
+    features_importance.Critère = features_importance.Critère.apply(lambda x: format_parameters(x))
     return result, features_importance
-
 
 # Launching the Gradio UI 
 
