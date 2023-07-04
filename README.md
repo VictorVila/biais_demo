@@ -6,7 +6,7 @@ Live : https://huggingface.co/spaces/VictorVS/biais_demo
 
 ## Scénario
 
-Une entreprise veut fluidifier son processus de recrutement et lance un projet d'IA qui trie des CVs. Pour cela, l'IA est entraînée avec les données issues des entretiens de recrutement précédents. L'idée subjacente est que l'IA sera capable de découvrir les critères de sélection partagés par les CV des personnes recrutées. Concrètement, chaque entretien est représenté comme une ligne d'un tableau qui comporte des informations des candidats ainsi que l'issue de l'entretien. 
+Une entreprise veut fluidifier son processus de recrutement et lance un projet d'IA qui **trie des CVs**. Pour cela, l'IA est entraînée avec les données issues des entretiens de recrutement précédents. L'idée subjacente est que l'IA sera capable de découvrir les critères de sélection partagés par les CV des personnes recrutées. Concrètement, chaque entretien est représenté comme une ligne d'un tableau qui comporte des informations des candidats ainsi que l'issue de l'entretien. 
 
 Imaginons qu'un recrutement est lancé pour embaucher un profil "confirmé" et que les données d'entraînement présentent un biais évident : aucune femme n'a été retenue et tous les hommes ont été recrutés sans tenir compte de leur profil (junior, confirmé ou senior). L'IA saura-t-elle préconiser les profils confirmés ? 
 
